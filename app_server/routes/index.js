@@ -6,6 +6,7 @@ const ctrlMain = require('../controllers/main');
 const ctrlRegister = require('../controllers/register');
 const ctrlLogin = require('../controllers/login');
 const ctrlCreateWord = require('../controllers/createWord');
+const ctrlSearch = require('../controllers/search');
 
 const ctrlTest = require('../controllers/test');
 
@@ -14,6 +15,8 @@ router.get('/', ctrlMain.index);
 router.get('/register', ctrlRegister.register);
 router.get('/login', ctrlLogin.login);
 router.get('/createWord', ctrlCreateWord.createWord);
+router.get('/search', ctrlSearch.search);
+
 
 router.get('/test', ctrlTest.winnerlist);
 
