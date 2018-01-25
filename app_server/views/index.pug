@@ -1,10 +1,9 @@
 extends layout
 
 block content
-  h1= 'Project Investor'
-  p Welcome to Investor, a project with the purpose of answering to the following question: "If I invest $1000 in Bitcoin, what happens?"
-  p
-    | Hello World! My name is Sampsa, and this is my first Node.js server
+    p Dank Dictionary is a place full of dank definitions created by users. <a href='/login'>Log in</a> to create new words!
+    a(href='/createWord') Create a new word
     br
     br
-    | We are live! (but this site is in development)
+    input(type="text" onchange="" placeholder="Type any word...")
+    button(onclick="") Search

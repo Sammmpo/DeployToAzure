@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 const index = require('./app_server/routes/index');
+//const register = require('./app_server/routes/register');
+
 const users = require('./app_server/routes/users');
 const sampsa = require('./app_server/routes/sampsa');
 
@@ -24,6 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+//app.use('/', register);
+
 app.use('/users', users);
 app.use('/sampsa', sampsa);
 

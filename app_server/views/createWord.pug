@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  p // if (loggedIn=false){redirect: /login}else{...
+  p New Word
+  input(type='text' placeholder='Word')
+  br
+  input(type='text' placeholder='Type your definition here...')
+  br
+  input(type='text' placeholder='Type an example of how it is used in a sentence...')
+  br
+  button(onclick='') Create
