@@ -10,7 +10,7 @@ const ctrlCreateWord = require('../controllers/createWord');
 const ctrlTest = require('../controllers/test');
 
 // Defining the routes and associating the routes to their corresponding controllers
-router.get('/', ctrlMain.index, ctrlMain.asd);
+router.get('/', ctrlMain.index);
 router.get('/register', ctrlRegister.register);
 router.get('/login', ctrlLogin.login);
 router.get('/createWord', ctrlCreateWord.createWord);
