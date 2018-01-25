@@ -1,22 +1,24 @@
 doctype html
 html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   head
     title= 'Dank Dictionary'
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    p List of all pages (for development)
-    a(href='/') index
+    span Page links (for development only): |  
+    a(href='/') index |  
+    a(href='/register') register |  
+    a(href='/login') login |  
+    a(href='/createWord') createWord |  
+    a(href='/test') test |  
+    a(href='/sampsa') sampsa |  
     br
-    a(href='/register') register
-    br
-    a(href='/login') login
-    br
-    a(href='/createWord') createWord
-    br
-    br
-    a(href='/test') test
-    br
-    a(href='/sampsa') sampsa
+    <div class="jumbotron text-center">
+      <h1>Dank Dictionary</h1>
+      <p>Dankest definitions created by people like you</p> 
+    </div>
 
-    h1= 'Dank Dictionary'
+
   block content

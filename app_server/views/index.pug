@@ -1,9 +1,21 @@
 extends layout
 
 block content
-    p Dank Dictionary is a place full of dank definitions created by users. <a href='/login'>Log in</a> to create new words!
-    a(href='/createWord') Create a new word
-    br
-    br
-    input(type="text" onchange="" placeholder="Type any word...")
-    button(onclick="") Search
+
+  div(class="container")
+  div(class="row")
+    div(class="col-sm-4")
+
+    div(class="col-sm-4")
+      h1= 'Welcome'
+      br
+      p Dank Dictionary is a place full of dank definitions created by users. <a href='/login'>Log in</a> to create new words!
+      a(href='/createWord') Create a new word
+      br
+      br
+      //- asd()-function missing
+      button(onclick="asd()") +
+      input(type="text" onchange="" placeholder="Type any word...")
+      button(onclick="") Search
+
+    div(class="col-sm-4")

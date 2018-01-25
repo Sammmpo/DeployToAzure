@@ -1,8 +1,17 @@
 extends layout
 
 block content
-  h1= 'Test Page'
-  p This is an area used for testing code
-  ul
-    each winner in winners
-      li= winner.year + ': ' + winner.team
+
+  div(class="container")
+  div(class="row")
+    div(class="col-sm-4")
+
+    div(class="col-sm-4")
+
+      h1= 'Test Page'
+      p This is an area used for testing code
+      ul
+      each winner in winners
+        li= winner.year + ': ' + winner.team
+
+    div(class="col-sm-4")

@@ -7,14 +7,14 @@ const ctrlRegister = require('../controllers/register');
 const ctrlLogin = require('../controllers/login');
 const ctrlCreateWord = require('../controllers/createWord');
 
-const ctrlTest = require('../controllers/test'); // ... for the list of World Cup winners (countries)
+const ctrlTest = require('../controllers/test');
 
 // Defining the routes and associating the routes to their corresponding controllers
-router.get('/', ctrlMain.index);
+router.get('/', ctrlMain.index, ctrlMain.asd);
 router.get('/register', ctrlRegister.register);
 router.get('/login', ctrlLogin.login);
 router.get('/createWord', ctrlCreateWord.createWord);
 
-router.get('/test', ctrlTest.winnerlist);  // List of World Cup winners (countries)
+router.get('/test', ctrlTest.winnerlist);
 
 module.exports = router;
