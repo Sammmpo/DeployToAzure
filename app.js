@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('./app_server/models/db');
 
 const index = require('./app_server/routes/index');
 
@@ -49,4 +50,4 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-console.log("Server running at http://localhost:3000");
+console.log("Server running at http://localhost:27017");
