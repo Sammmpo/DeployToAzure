@@ -1,5 +1,5 @@
 function goToCreateWordPage(){
-    window.location.href = '/createWord';
+    window.location.href = '/create';
 }
 
 function goToMainPage(){

@@ -4,7 +4,3 @@ const createWord = function(req, res){
 module.exports = {
     createWord
 };
-
-function asd(){
-    console.log("hello world!");
-}

@@ -14,8 +14,10 @@ const ctrlTest = require('../controllers/test');
 router.get('/', ctrlMain.index);
 router.get('/register', ctrlRegister.register);
 router.get('/login', ctrlLogin.login);
-router.get('/createWord', ctrlCreateWord.createWord);
+router.get('/create', ctrlCreateWord.createWord);
 router.get('/search', ctrlSearch.search);
+
+// router.get('/createAction', ctrlCreateWord.setDefaultValues);
 
 
 router.get('/test', ctrlTest.winnerlist);

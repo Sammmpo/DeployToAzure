@@ -8,18 +8,15 @@ block content
 
     div(class="col-sm-4")
 
-      //- p // if ( loggedIn===false ){ window.location.href = '/'; }
       h1= 'Create Word'
-      br
-      input(type='text' placeholder='Word')
-      br
-      input(type='text' placeholder='Type your definition here...')
-      br
-      input(type='text' placeholder='Type an example of how it is used in a sentence...')
-      br
-      br
-      button(onclick="addWord()") Create
+      <form action="/createAction">
+        <div class="form-group">
+          <input type="text" class="form-control" id="word" placeholder="Word" name="word">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="pwd" placeholder="Type your definition here" name="definition">
+        </div>
+        <button type="submit" class="btn btn-default">Create</button>
+      </form>
 
     div(class="col-sm-4")
-
-  //- script(src="./scripts/addWord.js")
