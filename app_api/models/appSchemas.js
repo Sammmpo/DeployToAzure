@@ -8,4 +8,4 @@ const wordSchema = new mongoose.Schema({word:String, definition:String});
 // mongoose.model('football', footballSchema);
 // mongoose.model('goldenball', goldenBallSchema);
 
-mongoose.model('word', wordSchema)
+mongoose.model('word', wordSchema, 'word');
