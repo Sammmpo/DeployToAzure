@@ -20,6 +20,6 @@ router.get('/search', ctrlSearch.search);
 // router.get('/createAction', ctrlCreateWord.setDefaultValues);
 
 
-router.get('/test', ctrlTest.winnerlist);
+router.get('/test', ctrlTest.wordlist);
 
 module.exports = router;

@@ -1,17 +1,33 @@
-//testing
-const winnerlist = function(req, res){
-    res.render('test',{
-        winners:
-        [
-            {year:'1990', team:'Germany'},
-            {year:'1994', team:'Brazil'},
-            {year:'1998', team:'France'},
-            {year:'2002', team:'Brazil'},
-            {year:'2006', team:'Italy'},
-            {year:'2010', team:'Spain'},
-            {year:'2014', team:'Germany'}
-        ]});
+const request = require('request');
+const apiURL = require('./apiURLs');
+
+const wordlist = function(req, res) {
+    const path = '/api/word';
+    const requestOptions = {
+        url : apiURL.server + path,
+        method : 'GET',
+        json : {},
+        qs : {}
+    };
+
+    request(
+        requestOptions,
+        function (err, response, body){
+            if (err) {
+                res.render('error', {message: err.message});
+            } else if (response.statusCode !== 200){
+                res.render('error', {message: 'Error accessing API: ' + response.statusMessage + ' ('+ response.statusCode + ')' });
+            } else if (!(body instanceof Array)) {
+                res.render('error', {message: 'Unexpected response data'});
+            } else if (!body.length) {
+                res.render('error', {message: 'No documents in collection'});
+            } else {
+                res.render('test', {words: body});
+            }
+        }
+    )
 };
+
 module.exports = {
-    winnerlist
+    wordlist
 };
