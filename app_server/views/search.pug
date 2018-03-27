@@ -12,5 +12,8 @@ block content
       //- <button onclick="goToCreateWordPage()">+</button>
       //- input(id="searchInput" type="text" onchange="" placeholder="Type any word...")
       //- button(onclick="search()") Search
+      ul
+      each word in words
+        li= word.word + ': ' + word.definition
 
     div(class="col-sm-4")
