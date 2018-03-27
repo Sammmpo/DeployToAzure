@@ -1,7 +1,7 @@
 const request = require('request');
 const apiURL = require('./apiURLs');
 
-const wordlist = function(req, res) {
+const search = function(req, res) {
     const path = '/api/word';
     const requestOptions = {
         url : apiURL.server + path,
