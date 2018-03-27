@@ -29,5 +29,5 @@ const wordlist = function(req, res) {
 };
 
 module.exports = {
-    wordlist, search
+    search
 };
