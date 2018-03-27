@@ -52,4 +52,5 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-console.log("Server running at http://localhost:27017");
+console.log("Server running at http://localhost:3000");
+// console.log("Server running at http://localhost:27017");
