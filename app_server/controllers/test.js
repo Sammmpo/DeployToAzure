@@ -28,6 +28,39 @@ const wordlist = function(req, res) {
     )
 };
 
+const showForm = function(req, res){
+    res.render('search', { title: 'Express' });
+};
+
+const deleteData = function(req, res) {
+    const path = '/api/word';
+
+    const deletedata = {
+        word: req.body.word
+    };
+
+    const requestOptions = {
+        url : apiURL.server + path,
+        method : 'DELETE',
+        json : deletedata
+    };
+
+    request(
+        requestOptions,
+        function (err, response) {
+            if (response.statusCode === 201)  {
+                res.redirect('/search');
+            } else {
+                res.render('error', {message: 'Error deleting data: ' +
+                response.statusMessage +
+                ' ('+ response.StatusCode + ')' });
+            }
+        }
+    );
+};
+
 module.exports = {
-    wordlist
+    wordlist,
+    showForm,
+    deleteData
 };

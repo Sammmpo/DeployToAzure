@@ -22,4 +22,14 @@ router.get('/search', ctrlSearch.search);
 
 router.get('/test', ctrlTest.wordlist);
 
+router
+    .route('/create')
+    .get(ctrlCreateWord.showForm)
+    .post(ctrlCreateWord.addData);
+
+router
+    .route('/search')
+    .get(ctrlSearch.showForm)
+    .post(ctrlSearch.deleteData);
+
 module.exports = router;

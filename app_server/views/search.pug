@@ -19,5 +19,11 @@ block content
               tr
                 td #{word.word}
                 td #{word.definition}
+                td
+                  form(action="", method="post")
+                    input(type="text" name="word", value=word.word, style="display:none")
+                    input(type="text" name="definition", value=word.definition, style="display:none")
+                    button.btn-primary(type='submit') Delete
+                    //- , style="display:none"
 
     div(class="col-sm-4")

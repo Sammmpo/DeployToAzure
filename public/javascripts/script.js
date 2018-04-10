@@ -8,8 +8,8 @@ function goToMainPage(){
 
 let searchValue = "asd";
 function search(){
-    let searchValue = document.getElementById("searchInput").value;
-    window.location.href = '/search='+searchValue+'';
+    // let searchValue = document.getElementById("searchInput").value;
+    // window.location.href = '/search='+searchValue+'';
 }
 
 function addWord(){
